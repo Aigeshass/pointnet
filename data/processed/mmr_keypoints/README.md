@@ -1,0 +1,2 @@
+Folder for saving keypoint dataset files.
+
