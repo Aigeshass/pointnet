@@ -1,0 +1,24 @@
+# Never track these whole dirs
+venv/
+lightning_logs/
+
+# Raw data: ignore all, allow id.json
+data/raw/**
+!data/raw/id.json
+
+# Processed: ignore all, allow individual READMEs
+data/processed/**            # ignore everything first
+!data/processed/mmr_action/README.md
+!data/processed/mmr_iden/README.md
+!data/processed/mmr_keypoints/README.md
+
+# Checkpoints: ignore all, allow README
+checkpoints/**
+!checkpoints/README.md
+
+# Catch big binaries anywhere
+*.pkl
+*.ckpt
+*.onnx
+*.dylib
+*.tar.zst

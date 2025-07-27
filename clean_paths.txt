@@ -1,0 +1,8 @@
+data/raw/
+data/processed/
+checkpoints/
+venv
+*.pkl
+*.dylib
+*.onnx
+*.tar.zst
