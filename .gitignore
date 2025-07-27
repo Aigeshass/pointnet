@@ -1,24 +1,18 @@
-# Never track these whole dirs
+# Ignore large directories and files
 venv/
 lightning_logs/
 
-# Raw data: ignore all, allow id.json
-data/raw/**
-!data/raw/id.json
+# Ignore data directories but keep their structure
+data/raw/*
+data/processed/*
+checkpoints/*
 
-# Processed: ignore all, allow individual READMEs
-data/processed/**            # ignore everything first
+# Keep these specific files
+!data/raw/id.json
 !data/processed/mmr_action/README.md
 !data/processed/mmr_iden/README.md
 !data/processed/mmr_keypoints/README.md
-
-# Checkpoints: ignore all, allow README
-checkpoints/**
 !checkpoints/README.md
 
-# Catch big binaries anywhere
-*.pkl
-*.ckpt
-*.onnx
-*.dylib
-*.tar.zst
+# Explicitly ignore large files
+data/processed/mmr_action/seed_20_stacks_5_padd_point_task_action.pkl
